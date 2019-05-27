@@ -1,0 +1,43 @@
+{
+    "name": "grechanyuk/mainsms",
+    "description": "Package for laravel to use the service mainsms.ru",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Egor G.",
+            "email": "xorolllo@hotmail.com"
+        }
+    ],
+    "homepage": "https://github.com/grechanyuk/mainsms",
+    "keywords": ["Laravel", "MainSms"],
+    "require": {
+        "illuminate/support": "~5",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Grechanyuk\\MainSms\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Grechanyuk\\MainSms\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Grechanyuk\\MainSms\\MainSmsServiceProvider"
+            ],
+            "aliases": {
+                "MainSms": "Grechanyuk\\MainSms\\Facades\\MainSms"
+            }
+        }
+    }
+}
